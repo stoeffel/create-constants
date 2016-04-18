@@ -2,6 +2,7 @@
 
 > simple helper to create constants
 
+It uses [decamelize](https://github.com/sindresorhus/decamelize) and removes spaces to create the constants.
 
 ## Install
 
@@ -16,10 +17,11 @@ $ npm install --save create-constants
 const createConstants = require('create-constants');
 
 createConstants([
-  'ADD_TODO',
-  'REMOVE_TODO',
+  'add todo',
+  'remove todo',
+  'filterTodos',
 ]);
-//=> { ADD_TODO: 'ADD_TODO', REMOVE_TODO: 'REMOVE_TODO' }
+//=> { ADD_TODO: 'ADD_TODO', REMOVE_TODO: 'REMOVE_TODO', FILTER_TODOS: 'FILTER_TODOS' }
 ```
 
 

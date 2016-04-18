@@ -24,7 +24,10 @@
   "keywords": [
     "constants"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "compose-function": "^3.0.3",
+    "decamelize": "^1.2.0"
+  },
   "devDependencies": {
     "ava": "^0.14.0",
     "nyc": "^6.4.0"
