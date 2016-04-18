@@ -14,14 +14,22 @@ $ npm install --save create-constants
 ## Usage
 
 ```js
+// createConstants :: Array -> Object
 const createConstants = require('create-constants');
 
 createConstants([
   'add todo',
   'remove todo',
   'filterTodos',
+  'SORT_TODOS',
 ]);
-//=> { ADD_TODO: 'ADD_TODO', REMOVE_TODO: 'REMOVE_TODO', FILTER_TODOS: 'FILTER_TODOS' }
+/*
+  => { ADD_TODO: 'ADD_TODO'
+     , REMOVE_TODO: 'REMOVE_TODO'
+     , FILTER_TODOS: 'FILTER_TODOS'
+     , SORT_TODOS: 'SORT_TODOS'
+     }
+*/
 ```
 
 
