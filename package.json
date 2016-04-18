@@ -1,0 +1,32 @@
+{
+  "name": "create-constants",
+  "version": "0.0.0",
+  "description": "Create constants",
+  "license": "MIT",
+  "repository": "stoeffel/create-constants",
+  "author": {
+    "name": "Stoeffel",
+    "email": "schtoeffel@gmail.com",
+    "url": "stoeffel.github.io"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "nyc ava",
+    "release-major": "xyz --repo git@github.com:stoeffel/create-constants.git --increment major",
+    "release-minor": "xyz --repo git@github.com:stoeffel/create-constants.git --increment minor",
+    "release-patch": "xyz --repo git@github.com:stoeffel/create-constants.git --increment patch"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "constants"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "^0.14.0",
+    "nyc": "^6.4.0"
+  }
+}
