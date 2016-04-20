@@ -15,7 +15,7 @@ $ npm install --save create-constants
 
 ```js
 // createConstants :: Array -> Object
-const createConstants = require('create-constants');
+import constants from 'create-constants';
 
 createConstants([
   'add todo',
@@ -37,9 +37,8 @@ This is useful if you create [ducks](https://github.com/erikras/ducks-modular-re
 
 ```js
 // createConstants :: Array -> Object
-const createConstants = require('create-constants');
 // namespace :: String -> Object -> Object
-const namespace = require('create-constants').namespace;
+import constants, {namespace} from 'create-constants';
 
 
 R.compose(
@@ -62,7 +61,7 @@ R.compose(
 
 // or shorter
 // namespacedConstants :: String -> Array -> Object
-const namespacedConstants = require('create-constants').namespacedConstants;
+import {namespacedConstants} from 'create-constants';
 
 namespacedConstants('myapp.todo.', [
   'add',
