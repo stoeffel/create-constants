@@ -32,16 +32,52 @@ createConstants([
 */
 ```
 
+You can namespace the constants using `namespace`.
+This is useful if you create [ducks](https://github.com/erikras/ducks-modular-redux).
 
-## API
+```js
+// createConstants :: Array -> Object
+const createConstants = require('create-constants');
+// namespace :: String -> Object -> Object
+const namespace = require('create-constants').namespace;
 
-### createConstants(keys)
 
-#### input
+R.compose(
+  namespace('myapp/todo/'),
+  createConstants
+)([
+  'add',
+  'remove',
+  'filter',
+  'sort'
+]);
+/*
+  => { ADD: 'myapp/todo/ADD'
+     , REMOVE: 'myapp/todo/REMOVE'
+     , FILTER: 'myapp/todo/FILTER'
+     , SORT: 'myapp/todo/SORT'
+     }
+*/
 
-Type: `Array`
 
-An array of keys.
+// or shorter
+// namespacedConstants :: String -> Array -> Object
+const namespacedConstants = require('create-constants').namespacedConstants;
+
+namespacedConstants('myapp.todo.', [
+  'add',
+  'remove',
+  'filter',
+  'sort'
+]);
+/*
+  => { ADD: 'myapp.todo.ADD'
+     , REMOVE: 'myapp.todo.REMOVE'
+     , FILTER: 'myapp.todo.FILTER'
+     , SORT: 'myapp.todo.SORT'
+     }
+*/
+```
 
 
 ## License

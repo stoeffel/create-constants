@@ -26,7 +26,8 @@
   ],
   "dependencies": {
     "compose-function": "^3.0.3",
-    "decamelize": "^1.2.0"
+    "decamelize": "^1.2.0",
+    "fn-curry": "0.0.1"
   },
   "devDependencies": {
     "ava": "^0.14.0",
